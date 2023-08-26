@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
           title: [
             const Text("Accueil"),
             const Text("Planning"),
-            const Text("Ajout")
+            const Text("Formulaire")
           ][_currentIndex],
         ),
         // Changement de page en fonction de _currentIndex
