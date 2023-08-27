@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
 
@@ -126,9 +127,20 @@ class _AddEventPageState extends State<AddEventPage> {
                         //Pour fermer le clavier
                         FocusScope.of(context).requestFocus(FocusNode());
 
-                        print("Ajout de la conf $confName par le speaker $speakerName");
+                        /*print("Ajout de la conf $confName par le speaker $speakerName");
                         print("type de conférence $selectedConfType");
-                        print("date : $selectedConfDate");
+                        print("date : $selectedConfDate");*/
+
+                        //Ajout dans la BDD
+                        CollectionReference eventsRef = FirebaseFirestore.instance.collection("Events");
+                        eventsRef.add({
+                          'speaker': speakerName,
+                          'date': selectedConfDate,
+                          'subject': confName,
+                          'type': selectedConfType,
+                          'avatar': 'lior'
+                        });
+                        
                       }
                     },
                     child: const Text("Envoyer")
