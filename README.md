@@ -1,6 +1,6 @@
 # asynconf
 
-Application mobile
+Application mobile flutter 3
 
 ## Getting Started
 
