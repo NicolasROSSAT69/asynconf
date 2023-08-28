@@ -63,46 +63,46 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   List<BottomNavigationItem> buildBottomNavigationItemList() => [
     BottomNavigationItem(
       activeIcon: const Icon(
-        Icons.notifications_active,
-        color: Colors.amber,
+        Icons.home,
+        color: Colors.blue,
         size: 18,
       ),
       inActiveIcon: const Icon(
-        Icons.notifications_none,
+        Icons.home,
         color: Colors.grey,
         size: 21,
       ),
-      title: 'explore',
+      title: 'Accueil',
       color: Colors.white,
       vSync: this,
     ),
     BottomNavigationItem(
       activeIcon: const Icon(
-        Icons.perm_camera_mic,
-        color: Colors.amber,
+        Icons.calendar_month,
+        color: Colors.blue,
         size: 18,
       ),
       inActiveIcon: const Icon(
-        Icons.perm_contact_calendar,
+        Icons.calendar_month,
         color: Colors.grey,
         size: 21,
       ),
-      title: 'favorite',
+      title: 'Planning',
       color: Colors.white,
       vSync: this,
     ),
     BottomNavigationItem(
       activeIcon: const Icon(
-        Icons.person_pin,
-        color: Colors.amber,
+        Icons.add,
+        color: Colors.blue,
         size: 18,
       ),
       inActiveIcon: const Icon(
-        Icons.person_outline,
+        Icons.add,
         color: Colors.grey,
         size: 21,
       ),
-      title: 'learn',
+      title: 'Ajout',
       color: Colors.white,
       vSync: this,
     ),
